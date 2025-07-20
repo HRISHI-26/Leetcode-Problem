@@ -11,4 +11,4 @@ class Solution:
                         sum += accounts[i][j]
                 if sum > rich:
                     rich = sum
-        return rich
+            return rich
