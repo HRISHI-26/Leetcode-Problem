@@ -11,6 +11,7 @@ class Solution:
                     if accounts[i][j] in range(1, 101):
                         sum += accounts[i][j]
                         wealth.append(sum)
-                if sum > rich:
-                    rich = sum
+                if sum < rich:
+                    continue
+                rich = sum
         return rich
