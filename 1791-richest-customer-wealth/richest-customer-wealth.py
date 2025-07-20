@@ -5,13 +5,10 @@ class Solution:
         rich = 0
         if m >= 1 and n <= 50:
             for i in range(m):
-                wealth = []
                 sum = 0
                 for j in range(n):
                     if accounts[i][j] in range(1, 101):
                         sum += accounts[i][j]
-                        wealth.append(sum)
-                if sum < rich:
-                    continue
-                rich = sum
+                if sum > rich:
+                    rich = sum
         return rich
