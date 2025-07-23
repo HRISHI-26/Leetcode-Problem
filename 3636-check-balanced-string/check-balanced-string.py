@@ -7,7 +7,4 @@ class Solution:
                 even_sum += int(num[i])
             else:
                 odd_sum += int(num[i])
-        if even_sum == odd_sum:
-            return True
-        else:
-            return False
+        return True if even_sum == odd_sum else False
