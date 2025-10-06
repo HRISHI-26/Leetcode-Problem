@@ -4,13 +4,14 @@ class Solution:
         maximum = 0
 
         for symbol in s:
-            
+
             if symbol == "(" or symbol == ")":
-                
+
                 if symbol == "(":
                     count += 1
                     if count > maximum:
                         maximum = count
                 elif symbol == ")":
                     count -= 1
+
         return maximum
