@@ -1,6 +1,6 @@
 class Solution:
     def isThree(self, n: int) -> bool:
-        rem = [n % i for i in range(1, int(n/2) + 1)]
-        if rem.count(0) + 1 == 3:
+        set_of_divisors = {divisor for divisor in range(1, n + 1) if n % divisor == 0}
+        if len(set_of_divisors) == 3:
             return True
         return False
