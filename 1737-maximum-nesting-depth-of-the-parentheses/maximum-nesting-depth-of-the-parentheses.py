@@ -1,17 +1,14 @@
 class Solution:
     def maxDepth(self, s: str) -> int:
-        count = 0
+        counter = 0
         maximum = 0
-
         for symbol in s:
-
             if symbol == "(" or symbol == ")":
-
                 if symbol == "(":
-                    count += 1
-                    if count > maximum:
-                        maximum = count
+                    counter += 1
+                    if counter > maximum:
+                        maximum = counter
                 elif symbol == ")":
-                    count -= 1
-
+                    counter -= 1
+        
         return maximum
