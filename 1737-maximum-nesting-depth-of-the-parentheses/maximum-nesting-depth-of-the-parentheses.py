@@ -6,8 +6,7 @@ class Solution:
             if symbol == "(" or symbol == ")":
                 if symbol == "(":
                     counter += 1
-                    if counter > maximum:
-                        maximum = counter
+                    maximum = max(maximum, counter)
                 elif symbol == ")":
                     counter -= 1
         
