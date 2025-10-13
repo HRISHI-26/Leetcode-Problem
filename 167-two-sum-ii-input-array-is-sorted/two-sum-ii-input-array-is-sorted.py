@@ -4,11 +4,12 @@ class Solution:
         left, right = 0, n-1
 
         while left < right:
-            sum_numbers = numbers[left] + numbers[right]
+            total = numbers[left] + numbers[right]
 
-            if sum_numbers < target:
-                left += 1
-            elif sum_numbers > target:
+            if total > target:
                 right -= 1
+            elif total < target:
+                left += 1
             else:
-                return [left+1, right+1]
+                return [left + 1, right + 1]
+
