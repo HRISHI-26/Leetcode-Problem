@@ -8,5 +8,5 @@ class Solution:
             if nums:
                 ans.append(nums.pop(0))
             ans.append(temp)
-
+        
         return ans
