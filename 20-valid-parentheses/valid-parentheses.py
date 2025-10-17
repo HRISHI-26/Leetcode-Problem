@@ -1,14 +1,15 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        key_map = {"(":")", "[":"]", "{":"}"}
+        symbol_table = {"(":")", "[":"]", "{":"}"}
         stack = []
-        for i in s:
-            if i in key_map:
-                stack.append(i)
+
+        for symbol in s:
+            if symbol in symbol_table:
+                stack.append(symbol)
             else:
                 if not stack:
                     return False
                 top = stack.pop()
-                if i != key_map[top]:
+                if symbol != symbol_table[top]:
                     return False
         return not stack
