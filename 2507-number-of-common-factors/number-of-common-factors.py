@@ -1,11 +1,13 @@
 class Solution:
     def commonFactors(self, a: int, b: int) -> int:
         count = 0
-        minimum = min(a, b)
+        if a > b:
+            for factor in range(1, b + 1):
+                if a % factor == 0 and b % factor == 0:
+                    count += 1
+        elif b >= a:
+            for factor in range(1, a + 1):
+                if a % factor == 0 and b % factor == 0:
+                    count += 1
 
-        for num in range(1, minimum + 1):
-            if a % num == 0 and b % num == 0:
-                count += 1
-        
         return count
-                
