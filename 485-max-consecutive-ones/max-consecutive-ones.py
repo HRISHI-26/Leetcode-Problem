@@ -5,8 +5,7 @@ class Solution:
         for num in nums:
             if num == 1:
                 count += 1
-                if count > maximum:
-                    maximum = count
+                maximum = max(maximum, count)
             else:
                 count = 0
 
