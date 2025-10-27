@@ -13,4 +13,3 @@ class Solution:
                 if min % i == 0 and max % i == 0:
                     gcd = i
             return gcd
-
