@@ -11,4 +11,3 @@ class Solution:
             if value > 1:
                 return True
         return False
-            
